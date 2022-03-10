@@ -1,0 +1,290 @@
+show databases
+show dbs
+use techno
+show dbs
+db.creatCollection('test')
+db.creatCollection('test');
+db.createCollection('test');
+show dbs
+show collections
+db.tect.insert({"name:"Shivam"})
+db.tect.insert({"name":"Shivam"})
+db.test.insert({"name":"Shivam"})
+db.test.insert({"name":"Omkar"})
+db.test.fiind()
+db.test.find()
+db.test.insert({"name":"Praveen", "age":23, "girlfriend":"Shivam"})
+db.test.find
+db.test.find()
+db.test.insert({"_id":1, "name":"Dhanu"})
+db.test.find()
+show databases
+show collections
+display collections
+use techno
+show collection
+show collections
+db.test.insert({"name":"Aquib"})
+db.test.find()
+//Create
+db.createCollection(""emp)
+db.createCollection(""emp")
+db.createCollection("emp")
+show collections
+use emp
+db.emp.find()
+db.emp.insert({eid:111,ename:"Omkar", age:21, sal:10000, Phone:8988788787, dno:10, address{}})
+db.emp.insert({eid:111,ename:"Omkar", age:21, sal:10000, Phone:8988788787, dno:10, address{city:"Banglore", street:"Katrtiguupe", pin:56755}})
+db.emp.insert({eid:111,ename:"Omkar", age:21, sal:10000, Phone:8988788787, dno:10, address:{city:"Banglore", street:"Katrtiguupe", pin:56755}})
+db.emp.insert({eid:112,ename:"Dhanu", age:23, sal:20000, Phone:8955787877, dno:11, address:{city:"Haidrabad", street:"Vijaynagar", pin:67686}})
+db.emp.insert({eid:113,ename:"Praveen", age:24, sal:30000, Phone:9898799887, dno:10, address:{city:"Chennai", street:"MG road", pin:342426}})
+db.emp.insert({eid:113,ename:"Shivam", age:25, sal:10000, Phone:87899787887, dno:20, address:{city:"Pune", street:"Jaynagar", pin:569898}})
+db.emp.find()
+//WAQTD name of employee
+db.emp.find({},{name:true})
+db.emp.find({},{ename:true})
+db.emp.find().pretty()
+db.emp.find({}, {ename:1,_id:0})
+//WAQTD details of employees whoes salary is 10000
+db.emp.find({sal:10000},{})
+db.emp.find({sal:10000},{}).pretty()
+db.emp.find({address.city:Banglore},{_id:true, dno:1}).pretty()
+db.emp.find({address:city:Banglore},{_id:true, dno:1}).pretty()
+db.emp.find({address:{city:Banglore}},{_id:true, dno:1}).pretty()
+db.emp.find({address:{city:Banglore}},{eid:true, dno:1}).pretty()
+db.emp.find({address:{city:"Banglore"}},{eid:true, dno:1}).pretty()
+db.emp.find({address.{city:"Banglore"}},{eid:true, dno:1}).pretty()
+db.emp.find({address:{city:"Banglore"}},{eid:true, dno:true}).pretty()
+show dbs
+use emp
+show collections
+db.emp.find({'address.city':'Banglore'}{eid:1, dno:1,_id:0}).pretty()
+db.emp.find({'address.city':'Banglore'},{eid:1, dno:1,_id:0}).pretty()
+//WAQTD city and street of all employee who are working in dno 30
+db.emp.find({dno:30},{'address.city':true, 'address.street':true}).pretty()
+db.emp.find({dno:10},{'address.city':true, 'address.street':true}).pretty()
+//WAQTD city and street of all employee who are working in dno 20
+db.emp.find({dno:20},{'address.city':true, 'address.street':true}).pretty()
+//WAQTD sal and dno of all the employees whoes name is "omkar" and "praveen"
+db.emp.find({ename:'Omkar'},{sal:true, dno:true}).pretty()
+db.emp.find({ename:'Omkar'},{sal:true, dno:true, _id:0}).pretty()
+//WAQTD dtails of employes whoes phone no is 8998798787
+db.emp.find({phone :9898798798},{}).pretty()
+//WAQTD address of employee working in dno 10 and sal 10000
+db.emp.find({},{address:1, }).pretty()
+db.emp.find({dno:10, sal:10000},{address:1,_id:0 }).pretty()
+//WAQTD address of employee working in dno 10 and sal 10000
+db.emp.find({dno:10, sal:10000},{address:1,_id:0 }).pretty()
+WAQTD name and the sal of the employees whoes pin code is 67686
+db.emp.find({'address.pin':67686},{eid:1,ename:1_id:0 }).pretty()
+db.emp.find({'address.pin':67686},{eid:1,ename:1,_id:0 }).pretty()
+//
+db.emp.find({},{sal:1,_id:0 }).pretty()
+//WAQTD details of the employees whoes salary is
+//WAQTD details of the employees whoes salary is<1500
+db.emp.find({sal>10000},{_id:0 }).pretty()
+db.emp.find({sal:>10000},{_id:0 }).pretty()
+db.test.find({sal:{$lt:15000}}{}).pretty()
+db.test.find({sal:{$lt:15000}},{}).pretty()
+db.test.find({sal:{$lt:20000}},{}).pretty()
+db.test.find().pretty()
+show dbs
+use emp
+db.test.find().pretty()
+use emp
+db.emp.find()
+db.test.find({sal:{$lt:20000}},{}).pretty()
+db.emp.find().pretty()
+db.test.find({sal:{$lt:20000}},{}).pretty()
+db.test.find({sal:{$lt:200}},{}).pretty()
+db.emp.find({sal:{$lt:20000}},{}).pretty()
+db.emp.find({sal:{$gt:10000}},{ename:1,eid:1,_id:0}).pretty()
+db.emp.find({sal:{$lt:10000}},{ename:1,sal:1,_id:0}).pretty()
+db.emp.find({sal:{$lt:20000}},{ename:1,sal:1,_id:0}).pretty()
+db.emp.find({sal:{$lt:2000}},{ename:1,city:1,_id:0}).pretty()
+db.emp.find({sal:{$lt:20000}},{ename:1,city:1,_id:0}).pretty()
+db.emp.find({sal:{$lt:2000}},{ename:1,'address.city':1,_id:0}).pretty()
+db.emp.find({sal:{$lte:20000}},{ename:1,'address.city':1,_id:0}).pretty()
+db.emp.find({'address.city':{$in:'Banglore',' Haidrabad'}},{eid:1,_id:0}).pretty()
+db.emp.find({'address.city':{$in:'Banglore',' Haidrabad'}},{eid:1,'_id':0}).pretty()
+db.emp.find({'address.city':{$in:['Banglore',' Haidrabad']}},{eid:1,'_id':0}).pretty()
+use ('emp')
+db.emp.find()
+show dbs
+switch emp
+switch 'emp'
+switch ('emp')
+use emp
+db.emp.find
+db.emp.find()
+use emp1
+show dbs
+use emp1
+db.createCollection("empD")
+show empD
+use empD
+;
+db.empD.insert({"empid":001,"name":"Praveen", "age":23, "phone":11111, "email":"praveen@123", "address":{"city":"banglore", "place":"banashankari", "pin":560006}})
+db.empD.insert({"empid":001,"name":"Omkar", "age":21, "sal":10000, "phone":22222, "email":"omkar@123", "address":{"city":"pune", "place":"wakad", "pin":666666}})
+db.empD.insert({"empid":002,"name":"Shivam", "age":24, "sal":20000, "phone":33333, "email":"Shivu@123", "address":{"city":"patana", "place":"Ramnagari", "pin":777777}})
+db.empD.insert({"empid":003,"name":"Dhanushree", "age":23, "sal":10000, "phone":44444, "email":"dhau@123", "address":{"city":"banglore", "place":"katriguppe", "pin":888888}})
+db.empD.insert({"empid":004,"name":"Prabhat", "age":26, "sal":30000, "phone":55555, "email":"prabhat@123", "address":{"city":"Hydrabad", "place":"vikhroli", "pin":111111}})
+db.empD.insert({"empid":005,"name":"Aquib", "age":25, "sal":20000, "phone":66666, "email":"aquib@123", "address":{"city":"Chennai", "place":"uri", "pin":999999}})
+db.empD.insert({"empid":006,"name":"Shubham", "age":26, "sal":30000, "phone":77777, "email":"shubham@123", "address":{"city":"patana", "place":"Rajajinagar", "pin":777777}})
+db.empD.insert({"empid":007,"name":"Nandan", "age":25, "sal":20000, "phone":88888, "email":"nandan@123", "address":{"city":"Hydrabad", "place":"aanandrao", "pin":888888}})
+db.empD.insert({"empid":008,"name":"Nilesh", "age":23, "sal":30000, "phone":99999, "email":"nilesh@123", "address":{"city":"pune", "place":"nashik", "pin":999999}})
+db.empD.insert({"empid":009,"name":"Mahesh", "age":25, "sal":10000, "phone":11112, "email":"mahesh@123", "address":{"city":"mumbai", "place":"gadhak", "pin":111111}})
+db.empD.find()
+db.empD.find().pretty()
+db.empD.find({$and: [{sal:{$lt:20000}},{'address.city':'banglore'}]},{}).pretty()
+db.empD.find({sal: $not: {$lt:30000}},{}).pretty()
+db.empD.find({sal: {$not: {$lt:30000}}},{}).pretty()
+db.empD.find({$and:{'address.city,:"banglore"},{sal:{$not{$ls:20000}}}},{}).pretty()
+db.empD.find({$and:{'address.city",:"banglore"},{sal:{$not{$ls:20000}}}},{}).pretty()
+db.empD.find({$and:{'address.city',:"banglore"},{sal:{$not{$ls:20000}}}},{}).pretty()
+db.empD.find({$and:{'address.city':"banglore"},{sal:{$not{$ls:20000}}}},{}).pretty()
+;
+db.empD.find({$and:{'address.city':"banglore"},{sal:{$not{$ls:20000}}}},{}).pretty();
+db.empD.find({$nor:[{'address.city':"banglore"},{sal:{$ls:20000}}]},{}).pretty();
+db.empD.find({$nor:[{'address.city':"banglore"},{sal:{$lt:20000}}]},{}).pretty();
+db.empD.find({$or:[{'address.city':"chennai"},{sal:{$gt:20000}}]},{}).pretty();
+db.empD.find({$and: [{sal:{$in:20000}}},{'address.city':'banglore'}]},{}).pretty()
+db.empD.find({$or:[{'address.city':"chennai"},{sal:{$gt:20000}}]},{}).pretty();
+db.empD.find({$and:[{'address.city':"chennai"}}}]},{}).pretty();
+db.empD.find({$and:[{'address.city':"chennai"}]},{}).pretty();
+db.empD.find({sal}{$exists:true},{}).pretty();
+db.empD.find(sal:{$exists:true},{}).pretty();
+db.empD.find(sal:{$exists:true}).pretty();
+db.empD.find({sal:{$exists:true}}).pretty();
+db.empD.find(temp:{$exists:true}).pretty();
+db.empD.find({temp:{$exists:true}}).pretty();
+db.empD.find({temp:{$exists:false}}).pretty();
+db.empD.insert(_id:101,temp:true);
+db.empD.insert({_id:101,temp:true});
+db.empD.find({temp:{$exists:true}}).pretty();
+db.empD.find({sal{$type:"number"}}).pretty();
+db.empD.find({sal:{$type:"number"}}).pretty();
+db.empD.find({sal:{$type:"string"}}).pretty();
+db.empD.find({sal:{$type:"object"}}).pretty();
+db.empD.find({sal:{$type:"Object"}}).pretty();
+db.empD.find({sal:{$type:"array"}}).pretty();
+db.empD.find({name:{$type:"array"}}).pretty();
+db.empD.find({address:{$type:"array"}}).pretty();
+db.empD.find({_id:{$type:"array"}}).pretty();
+db.empD.find({_id:{$type:"objectId"}}).pretty();
+;
+db.emp.findOne({},{})
+db.empD.findOne({},{})
+//WAQTD name of the 1st 3 employees
+db.empD.find({},{}).limit(2).pretty();
+db.empD.find({},{ename}).limit(2).pretty();
+db.empD.find({},{name}).limit(2).pretty();
+db.empD.find({},{'name'}).limit(2).pretty();
+db.empD.find({},{'name':1}).limit(3).pretty();
+db.empD.find({},{'name':1}).limit(5).pretty();
+db.empD.find({},{}).Count().pretty();
+db.empD.find({},{}).Count('_id').pretty();
+db.empD.find({},{'name':1}).Count(5).pretty();
+db.empD.find({},{}).Count().pretty();
+db.empD.find({},{}).Count();
+db.empD.find({},{}).Count()
+db.empD.find({},{'name':1}).Count()
+db.empD.find({},{}).count()
+db.empD.count()
+db.empD.find({},{}).limit(2).count()
+db.empD.find({sal:{$lt:20000}},{}).limit(2).count()
+db.empD.find({sal:{$lt:20000}},{}).count()
+db.empD.find({sal:{$lt:20000}},{'name':1}).count()
+db.empD.find({sal:{$lt:20000}},{'name':1}).sort(1)
+db.empD.find({},{'name':1}).sort(sal{-1})
+db.empD.find({},{'name':1}).sort(sal(-1))
+db.empD.find({},{'name':1}).sort('sal'(-1))
+db.empD.find({},{'name':1}).sort({'sal':-1})
+db.empD.find({},{}).sort({'sal':-1})
+db.empD.find({},{}).sort({'sal':1}).pretty()
+//WAQTD Detils of highest paid employe
+db.empD.find({},{}).sort({'sal':-1}).pretty()
+db.empD.find({},{}).sort({'sal':-1}).limit(1).pretty()
+db.empD.find({},{}).sort({'sal':-1}).limit(1)
+db.empD.find({},{}).sort({'sal':-1}).limit(1).pretty()
+db.empD.find({},{sal:1}).sort({'sal':-1}).limit(1).pretty()
+db.empD.remove(name:'Praveen');
+db.empD.remove(name:'Praveen')
+db.empD.remove({name:'Praveen'})
+db.empD.update({empid:002},{sal:15000})
+db.empD.find().pretty()
+//UPDATE
+db.empD.update({},{$rename{sal:'salary'}}{multi:true});
+db.empD.update({},{$rename:{sal:'salary'}}{multi:true});
+db.empD.update({},{$rename:{sal:'salary'}},{multi:true});
+db.empD.find().pretty()
+db.empD.update({},{salary{$exist:true}}{$inc:{salary:1000}},{multi:true});
+db.empD.update({},{salary:{$exist:true}}{$inc:{salary:1000}},{multi:true});
+db.empD.update({},{salary:{$exist:true}},{$inc:{salary:1000}},{multi:true});
+db.empD.update({salary:{$exist:true}},{$inc:{salary:1000}},{multi:true});
+db.empD.update({salary:{$exists:true}},{$inc:{salary:1000}},{multi:true});
+db.empD.find().pretty()
+db.empD.update({},{$unset:{'address.pin':""}},{multi:true});
+db.empD.find().pretty()
+db.empD.update({salary:{$exists:true}},{$max:{salry:15000}},{multi:true});
+db.empD.find().pretty()
+db.empD.update({salary:{$exists:true}},{$max:{salary:15000}},{multi:true});
+db.empD.find().pretty()
+db.empD.update({salary:{$exists:true}},{$min:{salary:20000}},{multi:true});
+db.empD.find().pretty()
+db.empD.update({empid:1},{$inc:{salary:500}},{upsert:true});
+db.empD.find().pretty()
+db.empD.remove({empid:1}).pretty()
+db.empD.remove({empid:1})
+db.empD.find().pretty()
+db.empD.remove({'address.city':banglore})
+db.empD.remove({'address.city':'banglore'}{justOne:true})
+db.empD.remove({'address.city':'banglore'},{justOne:true})
+use mongoDB
+show dbs
+use mongoDB
+db.createCollection(omkar)
+db.createCollection"(omkar")
+db.createCollection("omkar")
+show dbs
+db.dropDatabase()
+show dbs
+db.emp.aggregate({$match:{'address.city':'banglore'}},{ename:1,_id:1}})
+db.emp.aggregate({$match:{'address.city':'banglore'}},{ename:1,_id:1})
+db.emp.aggregate({$match:{'address.city':'banglore'}},{ename:1,_id:0})
+use emp
+show db
+show dbs
+use empD
+show collections
+db.emp.aggregate({$match:{'address.city':'banglore'}},{ename:1,_id:0})
+use empD
+show collections
+db.empD.find().pretty()
+db.emp.aggregate({$match:{age:25}},{ename:1,_id:0})
+db.empD.aggregate({$match:{age:25}},{ename:1,_id:0})
+use empD
+db.empD.aggregate({$match:{age:25}},{$project{ename:1,_id:0}})
+db.empD.aggregate({$match:{age:25}},{$project{name:1,_id:0}})
+db.empD.aggregate({$match:{age:25}},{$project:{name:1,_id:0}})
+db.empD.aggregate({$match:{salary:{$gt:20000}}},{$project:{name:1,_id:0}})
+db.empD.aggregate({$match:{salary:{$gt:10000}}},{$project:{name:1,_id:0}})
+;
+db.empD.aggregate({$match:{salary:{sort:1}}},{$project:{name:1,_id:0}})
+db.empD.aggregate({$match:{salary:{sort():1}}},{$project:{name:1,_id:0}})
+db.empD.aggregate({$sort:{salary:1}},{limit:1})
+db.empD.aggregate({$sort:{salary:1}},{$limit:1})
+db.empD.aggregate($group{age})
+db.empD.aggregate($group{age}{})
+db.empD.aggregate($group{age},{})
+db.empD.aggregate($group{age},{},{})
+db.empD.aggregate($group{age},{ename:1},{})
+db.empD.aggregate($group{age},{ename:1})
+db.empD.aggregate($group:{_id:$age})
+db.empD.aggregate($group:{_id:'$age'})
+db.empD.aggregate({$group:{_id:'$age'}})
+show dbs
+use empD
+show collections
+db.empD.find().pretty()
+db.empD.find().pretty().count()
